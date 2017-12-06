@@ -6,17 +6,19 @@ import json
 page_id = 'expedia'
 
 # Access token for my FB page ---- Remember this is a temporary access_token this will expire after limited time
-access_token = 'EAACEdEose0cBANJs0fHQeTb1jAff8sNXjk40v314kjw68uKFwIDZCukop9LLRFVZACVv5Mdu9EbBkxpgq0NZBT1O3v2rMZC2IJlXoLWfVW6KBsbxk5BzGusE2EabhTvu402WmZCEHYOGeyss3sX3eG7dousbELevntTkxmDrmdHFdZCSTAxLUtc3ZB22HonuftZCN5IZCg27n7AZDZD'
+access_token = 'EAACEdEose0cBAKRjNwGjUpq3MP4kY8pJYynCRGFnWZB3dWGZB3VRJdoBfMZBxhuuhKYIMznTMIJMT8EFYYTgOi2yXG105mFpD06fMdLfVVMiZCTj54W3KDr8qk13E5khXCYrteIagZAYxZBeHr7SdTooGXuU991ZB2DN2jSJ4boLva3HseKToGdmmZB5OZA0lx16CHyNBGdlmQgZDZD'
 
 # app_id = '692373707621416'
 # app_secret = <Secret Token>  # Generally should not be shared with anyone
 # access_token = app_id + '|' + app_secret
 
 def getFacebookPageData(page_id, access_token):
-    # construct the URL string
+    # Giving the Base URL for Facebook Graph API
     base = "https://graph.facebook.com/v2.4"
     node = "/" + page_id + "/posts"
     parameters = "/?access_token=%s" % access_token
+
+    # Construct the URL string
     url = base + node + parameters
 
     # retrieve data
@@ -30,4 +32,5 @@ def getFacebookPageData(page_id, access_token):
     with open('LatestPosts.json', 'w') as outfile:
         json.dump(limited, outfile)
 
+# Calling the Function
 getFacebookPageData(page_id, access_token)
