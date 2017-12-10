@@ -25,3 +25,9 @@ As said in the Project details, One must have a Facebook Developers account to g
 
 ## Results:
 - After running _python ExpediaPosts.py_, we will get a JSON file with Latest Eight Expedia's Facebook posts.
+
+## Miscellaneous: 
+- **Instead of 8 Latest Facebook Posts, we can collect data for any number of Posts**
+- **In addition to Posts, We can collect Post Comments, Reactions to Posts etc.**
+- **We can also collect the media information like Pictures, Videos, Post Links etc.**
+
